@@ -1,0 +1,19 @@
+{{! Footer partial template}}
+<footer id="footer-personal" class="full-size-container">
+
+	<nav class="footer-nav-bar">
+		{{navigation}}
+
+		{{#get "tags" limit="all" as |tags|}}
+			<ul class="tags-navigation">
+			{{#foreach tags}}
+				<li><a href="{{url}}">{{name}}</a></li>
+			{{/foreach}}
+			</ul>
+		{{/get}}
+	</nav>
+
+	<section id="widgets-area-a" class="widgets-area center-column"></section>
+	
+	<p id="bottom-copyright">&copy; {{date format="YYYY"}} {{@blog.title}}, Personal Theme by <a href="#">Aftertype</a>. Powered by <a href="//ghost.org">Ghost</a>.</p>	
+</footer>

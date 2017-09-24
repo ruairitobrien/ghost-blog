@@ -1,0 +1,60 @@
+{{!< default}}
+{{! Top line inserts this template on main layout}}
+
+{{! Main Author content section}}
+<main id="main-personal" class="full-size-container">
+	
+	<section id="tag-author-page-personal" class="posts-author content-column">
+
+		<div class="author-section">
+			{{#author}}
+			{{#if profile_image}}
+			<img class="author-pic" src="{{img_url profile_image}}" alt="{{name}}">
+			{{/if}}
+
+			<div class="author-info">
+				<h1 class="author-name libre-bold"><a href="{{url}}">{{name}}</a></h1>
+
+				<div class="author-social archivo-bold">
+					{{#if twitter}}
+					<a class="author-twitter" href="{{twitter_url}}">Twitter</a>
+					{{/if}}
+
+					{{#if facebook}}
+					<a class="author-facebook" href="{{facebook_url}}">Facebook</a>
+					{{/if}}
+					
+					<a href="{{url}}rss/" class="author-rss"><i class="fa fa-rss"></i> Subscribe RSS</a>
+				</div>
+
+				<div class="author-extra-meta archivo-bold">
+					<span class="author-count">	
+					<i class="fa fa-bar-chart"></i> {{plural ../pagination.total empty='No posts' singular='% Post' plural='% Posts'}}
+					</span>
+
+					{{#if location}}
+					<span class="author-location"><i class="fa fa-map-marker"></i> {{location}}</span>
+					{{/if}}
+
+					{{#if website}}
+					<a class="author-website" href="{{website}}">{{website}}</a>
+					{{/if}}
+				</div>
+
+				{{#if bio}}
+				<p class="author-bio">{{bio}}</p>
+				{{/if}}
+			</div>
+			{{/author}}
+		</div>
+
+	</section>
+
+	<div class="content-column">
+
+		{{> loop}}
+		
+		{{! Pagination links - displayed on every page}}
+		{{pagination}}
+	</div>
+</main>

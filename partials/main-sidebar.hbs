@@ -1,0 +1,26 @@
+{{! Main sidebar partial template}}
+<section id="main-left-sidebar">
+
+	{{#if @blog.logo}}
+		<div class="blog-logo" style="background-image:url({{@blog.logo}});"></div>
+	{{/if}}
+
+	<h1 class="blog-title libre-bold">{{@blog.title}}</h1>
+
+	<div class="blog-social-links archivo-bold">
+		<ul>
+		{{#if @blog.twitter}}
+			<li><a class="twitter" href="{{twitter_url}}"><i class="fa fa-twitter"></i> Twitter</a></li>
+		{{/if}}
+		{{#if @blog.facebook}}
+			<li><a class="facebook" href="{{facebook_url}}"><i class="fa fa-facebook"></i> Facebook</a></li>
+		{{/if}}
+			<li><a class="linkedin" href="https://www.linkedin.com/in/ruairitobrien/"><i class="fa fa-linkedin"></i> Linkedin</a></li>
+		</ul>
+	</div>
+
+	<p class="blog-description">
+		{{@blog.description}}
+	</p>
+	
+</section>

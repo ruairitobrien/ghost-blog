@@ -1,0 +1,22 @@
+{
+	"name": "ghost-blog",
+	"version": "1.0.0",
+	"description": "A ghost theme for my blog",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "./build.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:ruairitobrien/ghost-blog.git"
+	},
+	"author": {
+		"name": "Ruairí O'Brien",
+		"email": "ruairitobrien@gmail.com"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"archiver": "^2.0.3"
+	}
+}

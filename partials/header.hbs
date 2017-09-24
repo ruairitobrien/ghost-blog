@@ -1,0 +1,16 @@
+{{! Header partial template}}
+<header id="main-head-personal">
+	
+	<nav id="main-navigation-personal">
+		{{navigation}}
+
+		{{#get "tags" limit="all" as |tags|}}
+			<ul class="tags-navigation">
+			{{#foreach tags}}
+				<li><a href="{{url}}">{{name}}</a></li>
+			{{/foreach}}
+			</ul>
+		{{/get}}
+	</nav>
+
+</header>

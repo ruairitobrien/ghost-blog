@@ -1,0 +1,39 @@
+{{!< default}}
+{{! Top line inserts this template on main layout}}
+
+{{! Main Tag content section}}
+<main id="main-personal" class="full-size-container">
+	
+	<section id="tag-author-page-personal" class="content-column">
+
+		<div class="tag-page-info">
+			<h1 class="tag-title">
+				<span class="tag-posts-count">
+					{{plural pagination.total empty='No posts' singular='% post' plural='% posts'}} about
+				</span>
+				<br>
+				<span class="tag-name">
+				{{tag.name}}
+				</span>
+			</h1>
+
+			{{#if tag.description}}
+			<p class="tag-description">
+				{{tag.description}}
+			</p>
+			{{/if}}
+
+			<a href="{{@blog.url}}/tag/{{tag.slug}}/rss/" class="subscribe-to-tag archivo-bold">
+				<i class="fa fa-rss"></i> Subscribe to {{tag.name}}
+			</a>
+		</div>
+	</section>
+
+	<div class="content-column">
+
+		{{> loop}}
+		
+		{{! Pagination links - displayed on every page}}
+		{{pagination}}
+	</div>
+</main>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>{{meta_title}}</title>
+
+	<meta name="HandheldFriendly" content="True">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="shortcut icon" href="{{asset "favicon.png"}}">
+
+	<!--[if lt IE 9]>
+	<script src="//cdn.jsdelivr.net/nwmatcher/1.2.5/nwmatcher.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/css3-mediaqueries/0.1/css3-mediaqueries.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+	<![endif]-->
+
+	{{! Styles}}
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Archivo+Narrow:700|Libre+Baskerville:400,400i,700" />
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="{{asset "css/tranquil-heart.min.css"}}" />
+	<link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}" />
+
+	{{! Ghost OUTPUT Data}}
+	{{ghost_head}}
+</head>
+<body class="{{body_class}}" data-ghost_url="{{@blog.url}}">	
+	{{> header}}
+
+	{{{body}}}
+
+	{{> footer}}
+
+	{{! Ghost OUTPUT Data}}
+	{{ghost_foot}}
+
+	<script data-main="{{asset "js/main.js"}}" 
+    type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js"></script>
+	
+</body>
+</html>

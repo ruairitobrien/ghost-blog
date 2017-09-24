@@ -1,0 +1,15 @@
+{{!< default}}
+{{! Top line inserts this template on main layout}}
+
+{{! Main content section}}
+<main id="main-personal" class="full-size-container">
+
+	{{> main-sidebar}}
+
+	<section id="main-right-content">
+		{{> loop}}
+	</section>
+	
+	{{! Pagination links - displayed on every page}}
+	{{pagination}}
+</main>

@@ -1,0 +1,27 @@
+{{! Loop partial that displays the articles query on posts feed}}
+
+{{#foreach posts}}
+<article class="{{post_class}} feed-post">
+
+	<header class="post-head">
+
+		<div class="post-meta-info archivo-bold">
+			<time>{{date format="MMMM DD, YYYY"}}</time> 
+
+			{{#if tags}}
+				{{tags separator=""}}
+			{{/if}}
+		</div>
+
+		<h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+		
+	</header>
+
+	<section class="post-feed-content">
+		<p class="post-excerpt">	
+		{{excerpt words="54"}}...
+		</p>
+	</section>
+
+</article>
+{{/foreach}}
