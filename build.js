@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 var fs = require('fs');
 var archiver = require('archiver');
 
@@ -16,7 +15,7 @@ var archive = archiver('zip', {
 
 // listen for all archive data to be written
 output.on('close', function() {
-  console.log(archive.pointer() + ' total bytes');
+  console.log(archive.pointer() + ' total bytes written to ' + buildFile);
   console.log('archiver has been finalized and the output file descriptor has closed.');
 });
 
