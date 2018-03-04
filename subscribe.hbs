@@ -1,0 +1,15 @@
+{{!< default}}
+{{! Top line inserts this template on main layout}}
+
+{{! Subscribe page template}}
+{{#if success}}
+    <p style="text-align:center;">Thank you for subscribing!</p>
+{{else}}
+    {{subscribe_form
+        form_class="gh-signin"
+        input_class="gh-input"
+        button_class="btn btn-blue btn-block"
+        placeholder="Your email address"
+        autofocus="true"
+    }}
+{{/if}}

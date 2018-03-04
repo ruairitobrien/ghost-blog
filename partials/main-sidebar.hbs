@@ -9,6 +9,7 @@
 
 	<div class="blog-social-links archivo-bold">
 		<ul>
+
 		{{#if @blog.twitter}}
 			<li><a class="twitter" href="{{twitter_url}}"><i class="fa fa-twitter"></i> Twitter</a></li>
 		{{/if}}
@@ -22,5 +23,10 @@
 	<p class="blog-description">
 		{{@blog.description}}
 	</p>
-	
+{{#if @labs.subscribers}}
+	<section class="gh-subscribe">
+		<h3 class="gh-subscribe-title">Subscribe to {{@blog.title}}</h3>
+		{{subscribe_form placeholder="Your email address"}}
+	</section>
+{{/if}}	
 </section>
